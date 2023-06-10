@@ -1,0 +1,45 @@
+ In a file called clean place the command line that will search for all files - in the
+
+current directory as well as in its sub-directories - with a name ending by ~, or a
+
+name that start and end by #
+
+• The command line will show and erase all files found.
+
+• Only one command is allowed: no ’;’ or ’&&’ or other shenanigans.
+
+To create a file called "clean" with a command line that searches for and deletes files with specific names in the current directory and its subdirectories, you can follow these steps:
+
+1. Open a text editor.
+2. Create a new file and name it "clean".
+3. Add the following command line to the "clean" file:
+
+```shell
+find . -type f \( -name '*~' -o -name '#*#' \) -exec rm -f {} \; -print
+```
+
+Let's break down the components of the command:
+
+- `find .`: Searches for files in the current directory and its subdirectories.
+- `-type f`: Matches only regular files (excluding directories and other file types).
+- `\( -name '*~' -o -name '#*#' \)`: Specifies the conditions for file names. It matches files ending with '~' or files starting and ending with '#'.
+- `-exec rm -f {} \;`: Executes the `rm -f` command to delete the found files. The `{}` is a placeholder for the file name, and `\;` signifies the end of the `-exec` command.
+- `-print`: Prints the name of the deleted files.
+
+Please note that this command will permanently delete the files it finds, so exercise caution when using it. It's always a good idea to make a backup of your files before running such commands.
+
+Save the "clean" file and make sure it is executable by running the following command:
+
+```shell
+chmod +x clean
+```
+
+Now, you can run the "clean" script by executing the following command:
+
+```shell
+./clean
+```
+
+This will search for files with names ending in '~' or starting and ending with '#', delete them, and display the names of the deleted files.
+
+Please be cautious when using the script and ensure that you have the necessary permissions to delete the files in the specified directories.
