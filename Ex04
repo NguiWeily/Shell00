@@ -1,3 +1,11 @@
+In a midLS file, place the command line that will list all files and directories in your
+
+current directory (except for hidden files or any file that starts by a dot - yes, that
+
+includes double-dots), separated by a comma, by order of creation date. Make sure
+
+directories’ names are followed by a slash character.
+
 To create a "midLS" file with a command line that lists files and directories in your current directory (excluding hidden files and files starting with a dot), separated by a comma and sorted by creation date, you can follow these steps:
 
 1. Open a text editor.
