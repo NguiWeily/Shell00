@@ -1,3 +1,12 @@
+Create a file called z that returns "Z", followed by a new line, whenever the command
+
+cat is used on it.
+
+?>cat z
+
+Z
+
+?>
 To create a file called "z" that returns "Z" followed by a new line whenever the `cat` command is used on it, you can use the following commands in a Unix-like operating system:
 
 1. Create a new file called "z" using a text editor or the `echo` command:
