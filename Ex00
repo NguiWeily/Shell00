@@ -1,0 +1,23 @@
+To create a file called "z" that returns "Z" followed by a new line whenever the `cat` command is used on it, you can use the following commands in a Unix-like operating system:
+
+1. Create a new file called "z" using a text editor or the `echo` command:
+```
+echo -e "Z\n" > z
+```
+
+2. Make the file executable:
+```
+chmod +x z
+```
+
+3. Test the file by using the `cat` command:
+```
+cat z
+```
+
+The output should be:
+```
+Z
+```
+
+By following these steps, you create a file "z" with the desired behavior. Whenever the `cat` command is used on it, it will output "Z" followed by a new line.
