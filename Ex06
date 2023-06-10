@@ -1,3 +1,17 @@
+In this exercice, you will write a short shell script that lists all the existing files
+
+ignored by your GiT repository. Example:
+
+%> bash git_ignore.sh | cat -e
+
+.DS_Store$
+
+mywork.c~$
+
+%>
+
+To test your script, we will use our own environment.
+
 Certainly! Here's a shell script named "git_ignore.sh" that lists all the files ignored by a Git repository:
 
 ```shell
