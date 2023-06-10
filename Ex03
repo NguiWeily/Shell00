@@ -1,3 +1,12 @@
+
+Make sure you have a valid (non-expired) Kerberos ticket. If you don’t have one
+
+yet, get one.
+
+• Once you’ve got at least one Kerberos ticket, write a list of all your tickets into a
+
+file named klist.txt
+
 To check if you have a valid Kerberos ticket and write a list of your tickets to a file named "klist.txt", you can follow these steps:
 
 1. Open a terminal or command prompt.
