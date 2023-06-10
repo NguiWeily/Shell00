@@ -1,0 +1,19 @@
+Create a magic file called ft_magic that will be formatted appropriately to detect
+
+files of 42 file type, built with a "42" string at the 42nd byte.
+
+To create a magic file called `ft_magic` that detects files of the "42" file type based on the presence of a "42" string at the 42nd byte, you can follow the steps below:
+
+1. Open a text editor and create a new file named `ft_magic`.
+2. Add the following lines to the `ft_magic` file:
+
+```
+# Magic file for 42 file type
+42       string       42       at=42
+```
+
+3. Save the `ft_magic` file.
+
+The `ft_magic` file follows the format used by the `file` command in Unix-like systems to identify file types based on their content. The `42` entry specifies the file type name. The `string` keyword indicates that the detection should be based on a specific string of characters. The `at=42` option specifies that the string "42" should be found at the 42nd byte of the file for it to be recognized as the "42" file type.
+
+You can now use this `ft_magic` file with the `file` command or any other tool that utilizes magic files to identify the "42" file type based on the specified criteria.
