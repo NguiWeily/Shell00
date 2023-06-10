@@ -1,0 +1,29 @@
+To create a "midLS" file with a command line that lists files and directories in your current directory (excluding hidden files and files starting with a dot), separated by a comma and sorted by creation date, you can follow these steps:
+
+1. Open a text editor.
+
+2. Create a new file and name it "midLS" (without any file extension).
+
+3. Add the following command line to the "midLS" file:
+
+```shell
+
+ls -lt --ignore=".*" --format=comma
+
+```
+
+Let's break down the components of the command:
+
+- `ls`: The `ls` command lists files and directories.
+
+- `-lt`: The `-lt` options sort the list by creation date, with the most recently created files/directories shown first.
+
+- `--ignore=".*"`: The `--ignore=".*"` option excludes hidden files and files starting with a dot from the list.
+
+- `--format=comma`: The `--format=comma` option formats the output, separating each entry with a comma.
+
+4. Save the "midLS" file.
+
+Now, when you run the "midLS" command, it will execute the `ls` command with the specified options and provide a list of files and directories in your current directory (excluding hidden files or files starting with a dot), separated by a comma and sorted by creation date.
+
+Please note that the specific options and syntax of the `ls` command can vary slightly depending on the operating system and shell environment you are using. The above instructions assume a Unix-like environment.
