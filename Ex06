@@ -1,0 +1,47 @@
+Certainly! Here's a shell script named "git_ignore.sh" that lists all the files ignored by a Git repository:
+
+```shell
+
+#!/bin/bash
+
+git ls-files --others --ignored --exclude-standard
+
+```
+
+Let's break down the script:
+
+- The shebang `#!/bin/bash` ensures that the script is interpreted by the Bash shell.
+
+- `git ls-files` is the command that lists the files in the Git repository.
+
+- `--others` includes untracked files.
+
+- `--ignored` includes ignored files.
+
+- `--exclude-standard` excludes files ignored by standard Git ignore rules.
+
+To test the script, follow these steps:
+
+1. Open a text editor.
+
+2. Create a new file and name it "git_ignore.sh".
+
+3. Copy the script above into the "git_ignore.sh" file.
+
+4. Save the file.
+
+5. Open a terminal or command prompt.
+
+6. Navigate to the directory containing the "git_ignore.sh" file.
+
+7. Run the following command:
+
+```shell
+
+bash git_ignore.sh | cat -e
+
+```
+
+The `bash git_ignore.sh` command executes the script, and `cat -e` displays the output with a dollar sign ($) at the end of each line.
+
+Please note that you should run the script in your own environment with your own Git repository to get the correct output.
