@@ -1,0 +1,32 @@
+Certainly! Here's a shell script named "git_commit.sh" that displays the IDs of the last 5 commits in a Git repository:
+
+```shell
+#!/bin/bash
+
+git log --pretty=format:%H -n 5
+```
+
+Let's break down the script:
+
+- The shebang `#!/bin/bash` ensures that the script is interpreted by the Bash shell.
+- `git log` is the command that retrieves the commit history.
+- `--pretty=format:%H` specifies the output format to only display the commit IDs (hashes).
+- `-n 5` limits the output to the last 5 commits.
+
+To test the script, follow these steps:
+
+1. Open a text editor.
+2. Create a new file and name it "git_commit.sh".
+3. Copy the script above into the "git_commit.sh" file.
+4. Save the file.
+5. Open a terminal or command prompt.
+6. Navigate to the directory containing the "git_commit.sh" file.
+7. Run the following command:
+
+```shell
+bash git_commit.sh | cat -e
+```
+
+The `bash git_commit.sh` command executes the script and pipes the output to `cat -e`, which displays the output with a dollar sign ($) at the end of each line.
+
+Please note that you should run the script in your own environment with your own Git repository to get the correct output.
