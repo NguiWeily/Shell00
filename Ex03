@@ -1,37 +1,37 @@
+Chapter VI
+Exercise 03: SSH me!
+Exercise 03
+SSH Key
+Turn-in directory : ex03/
+Files to turn in : id_rsa_pub
+Allowed functions : None
+• Create your own SSH key. Once it is done:
+◦ Add your public key to your repository, in a file name id_rsa_pub
+◦ Update your ssh key on the intranet. This will allow you to push the repository
+to our git server.
+To complete Exercise 03 and create your own SSH key, you can follow these steps:
 
-Make sure you have a valid (non-expired) Kerberos ticket. If you don’t have one
+1. Open a terminal or command prompt on your local machine.
+2. Use the `ssh-keygen` command to generate a new SSH key pair. This command creates a public key (`id_rsa.pub`) and a private key (`id_rsa`) in the specified directory. By default, the keys are stored in the `~/.ssh/` directory.
 
-yet, get one.
+   ```
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
 
-• Once you’ve got at least one Kerberos ticket, write a list of all your tickets into a
+   Replace `"your_email@example.com"` with your actual email address. You can also specify a different directory to store the keys if desired.
 
-file named klist.txt
+3. You will be prompted to enter a passphrase. It's recommended to set a passphrase for added security, but you can leave it blank if you prefer.
+   ```
+   Enter passphrase (empty for no passphrase):
+   Enter same passphrase again:
+   ```
 
-To check if you have a valid Kerberos ticket and write a list of your tickets to a file named "klist.txt", you can follow these steps:
+4. Once the key pair is generated, you can find the public key (`id_rsa.pub`) in the specified directory (e.g., `~/.ssh/`).
 
-1. Open a terminal or command prompt.
-2. Run the following command to check if you have a valid Kerberos ticket:
+5. Add the public key (`id_rsa.pub`) to your repository. Create a file named `id_rsa_pub` in the `ex03/` directory of your repository and paste the contents of your public key into it.
 
-```
-klist
-```
+6. Update your SSH key on the intranet. Access the intranet or any relevant platform where you can manage your SSH keys. Locate the option to add or update your SSH key and paste the contents of your public key (`id_rsa.pub`) into the designated field.
 
-If you have a valid ticket, it will display the details of the ticket, including the ticket name, expiration date, and other information. If you don't have a valid ticket, you will need to obtain one.
+7. Save the changes, and now you should be able to push your repository to the git server using SSH.
 
-3. To write the list of your tickets to a file named "klist.txt", use the following command:
-
-```
-klist > klist.txt
-```
-
-This command redirects the output of the `klist` command to a file named "klist.txt".
-
-4. Verify that the file "klist.txt" has been created and contains the list of your Kerberos tickets by using a text editor or the `cat` command:
-
-```
-cat klist.txt
-```
-
-This will display the content of the "klist.txt" file, which should include the details of your Kerberos tickets.
-
-Please note that the steps above assume you have the necessary permissions to obtain Kerberos tickets and write files in the desired location. Additionally, the specific commands and steps may vary depending on your operating system and the Kerberos implementation you are using.
+Remember to keep your private key (`id_rsa`) secure and do not share it with anyone.
